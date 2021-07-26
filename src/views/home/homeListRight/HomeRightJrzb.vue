@@ -2,7 +2,7 @@
     <div class="home-jrzb">
         <right-title>
             <span slot="title-left">今日值班</span>
-            <span slot="title-right">更多 ></span>
+            <span class="more" slot="title-right">更多 ></span>
         </right-title>
         <div class="home-jrzb-wrapper">
             <jrzb-list :zb-list="zbList"/>

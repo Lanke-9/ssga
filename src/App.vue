@@ -23,6 +23,6 @@ export default {
     @import "assets/css/base.css";
 
     .app-container{
-        min-height: 500px;
+        min-height: calc(100vh - 538px);
     }
 </style>

@@ -1,12 +1,6 @@
 <template>
-    <div class="banner">
-        <div class="swiper-container" id="case1">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide" v-for="(item, i) in bannerList" :key="i">
-                    <div class="banner-img"></div>
-                </div>
-            </div>
-        </div>
+    <div class="banner-other">
+        <div v-for="(item, i) in num" :key="i" v-if="$store.state.currentTitle.currentBanner === item" class="banner-bg" :class="'banner-bg-'+item"></div>
 
         <div class="banner-desc">
             <div class="desc-wrapper auto-1200">
@@ -21,48 +15,25 @@
 </template>
 
 <script>
-import Swiper from 'swiper';
-import 'swiper/dist/idangerous.swiper.css';
-
 export default {
-    name: "Banner",
-    props: {
-        bannerList: {
-            type: Array,
-            default(){
-                return []
-            }
-        }
-    },
+    name: "BannerOther",
     data() {
         return {
-            value: 0
+            num: [1, 2, 3, 4, 5, 6]
         }
-    },
-    mounted() {
-        const mySwiper = new Swiper('#case1', {
-            autoplay: 4000,
-            speed: 1000,
-            loop: true,
-            autoplayDisableOnInteraction : false,
-            simulateTouch: false
-        })
     }
 }
 </script>
 
 <style scoped>
-    .banner{
+    .banner-other{
         width:100%;
         position: relative;
         min-width: 1200px;
     }
-    .banner-img{
-        width:100%;
+    .banner-bg{
+        width: 100%;
         height:248px;
-        background-image: url("../../assets/img/banner_01.png");
-        background-repeat:no-repeat;
-        background-position: center center;
         background-size: cover;
     }
     .banner-desc{
@@ -90,5 +61,23 @@ export default {
     .logo-desc-en{
         font-size: 12px;
         margin-top:5px;
+    }
+    .banner-bg-1{
+        background: url('../../assets/img/banner_01.png') no-repeat center center;
+    }
+    .banner-bg-2{
+        background: url('../../assets/img/banner_02.png') no-repeat center center;
+    }
+    .banner-bg-3{
+        background: url('../../assets/img/banner_03.png') no-repeat center center;
+    }
+    .banner-bg-4{
+        background: url('../../assets/img/banner_04.png') no-repeat center center;
+    }
+    .banner-bg-5{
+        background: url('../../assets/img/banner_05.png') no-repeat center center;
+    }
+    .banner-bg-6{
+        background: url('../../assets/img/banner_06.png') no-repeat center center;
     }
 </style>

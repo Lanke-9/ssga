@@ -47,11 +47,6 @@ export default {
                     head: '副班',
                     name: '何俊贤',
                     phone: '1567365553'
-                },
-                {
-                    head: '副班',
-                    name: '何俊贤',
-                    phone: '1567365553'
                 }
             ],
             noticeList: [

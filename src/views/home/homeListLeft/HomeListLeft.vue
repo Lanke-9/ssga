@@ -40,7 +40,7 @@ export default {
             schoolList_1: [
                 {
                     title: '学校执行',
-                    tabList: ['领导批示', '重要文件'],
+                    tabList: ['本站专稿', '重点工作'],
                     imgList: [],
                     data: [
                         [

@@ -4,7 +4,7 @@
             <div slot="title-left">
                 <span class="school-use-tab" :class="{'school-use-active': current === i}" v-for="(item,i) in useList" :key="i" @click="useTab(i)">{{ item.title }}</span>
             </div>
-            <span slot="title-right">更多 ></span>
+            <span class="more" slot="title-right">更多 ></span>
         </right-title>
         <div class="school-use-list">
             <right-list :list="useListData" />

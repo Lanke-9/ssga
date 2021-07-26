@@ -2,7 +2,7 @@
     <div class="home-video">
         <right-title>
             <span slot="title-left">视频点播</span>
-            <span slot="title-right">更多 ></span>
+            <span class="more" slot="title-right">更多 ></span>
         </right-title>
         <div class="video">
             <div class="video-img">
@@ -40,6 +40,8 @@ export default {
     .video-img{
         position: relative;
         overflow: hidden;
+        cursor: pointer;
+        transition: all 0.4s;
     }
     .video-img-i{
         width: 100%;

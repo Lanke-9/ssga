@@ -2,7 +2,7 @@
     <div class="home-notice">
         <right-title>
             <span slot="title-left">通知公告</span>
-            <span slot="title-right">更多 ></span>
+            <span class="more" slot="title-right">更多 ></span>
         </right-title>
         <div class="home-notice-list">
             <right-list :list="noticeList" />

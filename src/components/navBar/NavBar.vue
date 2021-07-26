@@ -28,6 +28,7 @@ export default {
         width: 100%;
         height: 45px;
         background: #081552;
+        min-width: 1200px;
     }
     .tab-wrapper{
         overflow: hidden;

@@ -4,7 +4,7 @@
             <div class="title-left">
                 <span class="title-text" v-for="(item, i) in tabList" :key="i" :class="{active: current === i}" @click="tabClick(i)">{{item}}</span>
             </div>
-            <div class="title-right"><span>更多 ></span></div>
+            <div class="title-right more"><span>更多 ></span></div>
         </div>
 
         <first-news :news-list="rNewList"/>

@@ -40,6 +40,13 @@ img{
     width:1200px;
     margin:0 auto;
 }
+.more{
+    cursor: pointer;
+}
+.more:hover{
+    text-decoration: underline;
+}
+
 
 .swiper-pagination-switch {
     display: inline-block;

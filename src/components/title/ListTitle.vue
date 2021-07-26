@@ -27,5 +27,9 @@ export default {
     .title-more{
         font-size:14px;
         color: #999;
+        cursor: pointer;
+    }
+    .title-more:hover{
+        text-decoration: underline;
     }
 </style>

@@ -28,6 +28,8 @@ export default {
 
 <style scoped>
     .foot{
+        width: 100%;
+        min-width: 1200px;
         background: #081552;
         padding: 30px 0 20px;
     }
@@ -45,9 +47,10 @@ export default {
     }
     .foot-desc{
         color: #fff;
-        opacity: 0.5;
+        opacity: 0.6;
         font-size: 14px;
         text-align: center;
+        font-weight: 300;
     }
     .foot-desc-tel{
         margin-bottom: 10px;

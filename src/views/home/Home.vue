@@ -30,6 +30,13 @@ export default {
         HomeLink,
         HomeListLeft,
         HomeListRight
+    },
+    created() {
+        this.$store.commit('changeCurrent', {
+            currentBanner: 0,
+            zh: '南京警察学院',
+            en: 'Nanjing Municipal Public Security Bureau'
+        });
     }
 }
 </script>

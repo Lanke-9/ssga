@@ -26,49 +26,49 @@ const routes = [
         path: '/home',
         component: Home,
         meta: {
-            title: '首页'
+            title: '南京警察学院'
         }
     },
     {
         path: '/construction',
         component: Construction,
         meta: {
-            title: '学校建设'
+            title: '学校建设-南京警察学院'
         }
     },
     {
         path: '/technology',
         component: Technology,
         meta: {
-            title: '学校科技'
+            title: '学校科技-南京警察学院'
         }
     },
     {
         path: '/system',
         component: System,
         meta: {
-            title: '学校制度'
+            title: '学校制度-南京警察学院'
         }
     },
     {
         path: '/schoolArchives',
         component: SchoolArchives,
         meta: {
-            title: '学校档案'
+            title: '学校档案-南京警察学院'
         }
     },
     {
         path: '/download',
         component: Download,
         meta: {
-            title: '资料下载'
+            title: '资料下载-南京警察学院'
         }
     },
     {
         path: '/addressBook',
         component: AddressBook,
         meta: {
-            title: '学校通讯录'
+            title: '学校通讯录-南京警察学院'
         }
     }
 ]
