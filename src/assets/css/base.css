@@ -1,0 +1,75 @@
+@import "./normalize.css";
+
+/*:root {*/
+/*    --color-text: #666;*/
+/*    --color-hign-text: #081552;*/
+/*    --color-background: #F8F9FB;*/
+/*    --font-size: 14px;*/
+/*    --line-height: 1.5;*/
+/*}*/
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    width: 100%;
+    background: #F8F9FB;
+}
+a {
+    color: #333;
+    text-decoration: none;
+}
+ul {
+   list-style: none;
+}
+li {
+    list-style: none;
+}
+img{
+    border: 0;
+}
+.left {
+    float: left;
+}
+.right{
+    float: right;
+}
+.auto-1200{
+    width:1200px;
+    margin:0 auto;
+}
+
+.swiper-pagination-switch {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 8px;
+    background: #fff;
+    margin: 0 3px;
+    cursor: pointer;
+}
+.swiper-active-switch {
+    background: #2179D6;
+
+}
+.ellipsis{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.ellipsis-2{
+    overflow:hidden;
+    text-overflow:ellipsis;
+    display:-webkit-box;
+    -webkit-line-clamp:2;
+    -webkit-box-orient:vertical;
+}
+.ellipsis-3{
+    overflow:hidden;
+    text-overflow:ellipsis;
+    display:-webkit-box;
+    -webkit-line-clamp:3;
+    -webkit-box-orient:vertical;
+}
