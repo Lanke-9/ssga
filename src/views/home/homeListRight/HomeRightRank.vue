@@ -8,7 +8,11 @@
                 </div>
             </right-title>
         </div>
-        <div class="rank-wrapper">
+        <div class="rank-wrapper"
+             v-loading="loading"
+             element-loading-text="加载中"
+             element-loading-spinner="el-icon-loading"
+             element-loading-background="rgba(255, 255, 255, 1)">
             <rank-list :rank-list-item="rankListItem" />
         </div>
     </div>
@@ -30,7 +34,8 @@ export default {
     },
     data(){
         return {
-            current: 0
+            current: 0,
+            loading: false
         }
     },
     components: {
@@ -44,7 +49,16 @@ export default {
     },
     methods: {
         rankTab(i) {
+            if(this.current !== i){
+                this.openLoading();
+            }
             this.current = i;
+        },
+        openLoading() {
+            this.loading = true;
+            setTimeout(() => {
+                this.loading = false;
+            },1000)
         }
     }
 }

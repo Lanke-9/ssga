@@ -9,7 +9,11 @@
                 <span>外网</span>
             </div>
         </div>
-        <ul class="rank-list-ul">
+        <ul class="rank-list-ul"
+            v-loading="loading"
+            element-loading-text="加载中"
+            element-loading-spinner="el-icon-loading"
+            element-loading-background="rgba(255, 255, 255, 1)">
             <li class="rank-list-li" v-for="(item, i) in dataList" :key="i">
                 <img class="rank-li-img left" src="../../assets/img/-_09.png" alt="">
                 <span class="rank-li-name left">{{ item.name }}</span>
@@ -22,6 +26,7 @@
 
 <script>
 export default {
+
     name: "RankList",
     props: {
         rankListItem: {
@@ -33,7 +38,8 @@ export default {
     },
     data() {
         return {
-            current: 0
+            current: 0,
+            loading: false
         }
     },
     computed: {
@@ -43,7 +49,16 @@ export default {
     },
     methods: {
         rankListTab(i) {
+            if(this.current !== i){
+                this.openLoading();
+            }
             this.current = i;
+        },
+        openLoading() {
+            this.loading = true;
+            setTimeout(() => {
+                this.loading = false;
+            },1000)
         }
     }
 }
@@ -85,7 +100,7 @@ export default {
     }
     .rank-li-img{
         margin-right: 6px;
-        margin-top: 10px;
+        margin-top: 7px;
     }
     .rank-li-name{
         width: 140px;
