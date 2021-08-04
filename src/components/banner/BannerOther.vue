@@ -1,13 +1,13 @@
 <template>
     <div class="banner-other">
-        <div v-for="(item, i) in num" :key="i" v-if="$store.state.currentTitle.currentBanner === item" class="banner-bg" :class="'banner-bg-'+item"></div>
+        <div v-for="(item, i) in num" :key="i" v-if="currentBanner === item" class="banner-bg" :class="'banner-bg-'+item"></div>
 
         <div class="banner-desc">
             <div class="desc-wrapper auto-1200">
                 <img class="logo left" src="../../assets/img/logo_03.png" alt="">
                 <div class="logo-desc left">
-                    <div class="logo-desc-zh">{{ $store.state.currentTitle.zh }}</div>
-                    <div class="logo-desc-en">{{ $store.state.currentTitle.en }}</div>
+                    <div class="logo-desc-zh">{{ currentTitle.zh }}</div>
+                    <div class="logo-desc-en">{{ currentTitle.en }}</div>
                 </div>
             </div>
         </div>
@@ -17,6 +17,18 @@
 <script>
 export default {
     name: "BannerOther",
+    props: {
+        currentBanner: {
+            type: Number,
+            default: 1
+        },
+        currentTitle: {
+            type: Object,
+            default() {
+                return {}
+            }
+        }
+    },
     data() {
         return {
             num: [1, 2, 3, 4, 5, 6]

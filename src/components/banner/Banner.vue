@@ -12,8 +12,8 @@
             <div class="desc-wrapper auto-1200">
                 <img class="logo left" src="../../assets/img/logo_03.png" alt="">
                 <div class="logo-desc left">
-                    <div class="logo-desc-zh">{{ $store.state.currentTitle.zh }}</div>
-                    <div class="logo-desc-en">{{ $store.state.currentTitle.en }}</div>
+                    <div class="logo-desc-zh">{{ currentTitle.zh }}</div>
+                    <div class="logo-desc-en">{{ currentTitle.en }}</div>
                 </div>
             </div>
         </div>
@@ -31,6 +31,12 @@ export default {
             type: Array,
             default(){
                 return []
+            }
+        },
+        currentTitle: {
+            type: Object,
+            default() {
+                return {}
             }
         }
     },
